@@ -1,0 +1,395 @@
+{
+  "Weapon": [
+    {
+      "Key": "POWERHAMMER",
+      "Name": "Power Hammer",
+      "Description": "[H3]Power Hammer[h3]\nThe Zillo-Tech Mk.XXVIIa Power Hammer is a high-tech sledgehammer manufactured of high-strength, ultra-light, ultra-dense materials and also includes a powered kinetic energy storage device to increase knockback. \n[BR][BR]\nThe storage device is incredibly durable, and can survive damage that would otherwise break the weapon, but it comes with one major flaw. The amount of energy required means that in a mere four or five durasteel-crumpling blows will drain a standard power pack. While this doesn't diminish the weapon's weight and raw impact power, the lack of a concussive blast of kinetic energy weakens the impact a fair amount. Additionally, the inertial dampeners are powered by the same energy source, causing the weapon to become incredibly unwieldy when unpowered.\n[BR][BR]\nWhen the power pack is drained after using up the Limited Ammo 5 quality, the weapon loses its Concussive 1 and Pierce 1 qualities, and gains the Inaccurate 1 and Unwieldy 3 qualities.\n[BR][BR]\nPlease see Rowler's Arg'garoks and Armaments for more details.",
+      "Source": "Rowler's Arg'garoks and Armaments",
+      "Custom": "AddedItem",
+      "Type": "Melee",
+      "Categories": {
+        "Category": [
+          "Bludgeoning Melee",
+          "Powered Melee"
+        ]
+      },
+      "Encumbrance": "5",
+      "HP": "2",
+      "Price": "1500",
+      "Rarity": "7",
+      "Restricted": "true",
+      "SkillKey": "MELEE",
+      "DamageAdd": "5",
+      "Crit": "4",
+      "SizeHigh": "10",
+      "RangeValue": "wrEngaged",
+      "Hands": "whTwoHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "CONCUSSIVE",
+            "Count": "1"
+          },
+          {
+            "Key": "CUMBERSOME",
+            "Count": "4"
+          },
+          {
+            "Key": "KNOCKDOWN"
+          },
+          {
+            "Key": "LIMITEDAMMO",
+            "Count": "5"
+          },
+          {
+            "Key": "PIERCE",
+            "Count": "1"
+          },
+          {
+            "Key": "SUNDER"
+          }
+        ]
+      },
+      "Range": "Engaged"
+    },
+    {
+      "Key": "BURSTHAMMER",
+      "Name": "Burst Hammer",
+      "Description": "[H3]Burst Hammer[h3]\nWielder suffers 1 Strain with every combat check made with this weapon.\n[BR][BR]\nPlease see Rowler's Arg'garoks and Armaments for details.",
+      "Source": "Rowler's Arg'garoks and Armaments",
+      "Custom": "AddedItem",
+      "Type": "Melee",
+      "Categories": {
+        "Category": [
+          "Bludgeoning Melee",
+          "Powered Melee"
+        ]
+      },
+      "Encumbrance": "6",
+      "HP": "1",
+      "Price": "1750",
+      "Rarity": "8",
+      "Restricted": "true",
+      "SkillKey": "MELEE",
+      "DamageAdd": "4",
+      "Crit": "4",
+      "SizeHigh": "10",
+      "RangeValue": "wrEngaged",
+      "Hands": "whTwoHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "BLAST",
+            "Count": "6"
+          },
+          {
+            "Key": "BURN",
+            "Count": "1"
+          },
+          {
+            "Key": "CUMBERSOME",
+            "Count": "3"
+          },
+          {
+            "Key": "KNOCKDOWN"
+          },
+          {
+            "Key": "UNWIELDY",
+            "Count": "3"
+          }
+        ]
+      },
+      "Range": "Engaged"
+    },
+    {
+      "Key": "SLEDGEHAMMER",
+      "Name": "Sledgehammer",
+      "Description": "[H3]Sledgehammer[h3]\nPlease see Rowler's Arg'garoks and Armaments for details.",
+      "Source": "Rowler's Arg'garoks and Armaments",
+      "Custom": "AddedItem",
+      "Type": "Melee",
+      "Categories": {
+        "Category": "Bludgeoning Melee"
+      },
+      "Encumbrance": "4",
+      "HP": "1",
+      "Price": "215",
+      "Rarity": "3",
+      "SkillKey": "MELEE",
+      "DamageAdd": "3",
+      "Crit": "5",
+      "SizeHigh": "10",
+      "RangeValue": "wrEngaged",
+      "Hands": "whTwoHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "DISORIENT",
+            "Count": "2"
+          },
+          {
+            "Key": "KNOCKDOWN"
+          }
+        ]
+      },
+      "Range": "Engaged"
+    },
+    {
+      "Key": "POWERBAT",
+      "Name": "Corellian Powerbat",
+      "Description": "[H3]Corellian Powerbat[h3]\nPlease see Rowler's Arg'garoks and Armaments for details.",
+      "Source": {
+        "_Page": "46",
+        "__text": "Collapse of the Republic"
+      },
+      "Custom": "AddedItem",
+      "Type": "Melee",
+      "Categories": {
+        "Category": [
+          "Bludgeoning Melee",
+          "Powered Melee"
+        ]
+      },
+      "Encumbrance": "3",
+      "HP": "3",
+      "Price": "700",
+      "Rarity": "6",
+      "SkillKey": "MELEE",
+      "DamageAdd": "3",
+      "Crit": "4",
+      "SizeHigh": "10",
+      "RangeValue": "wrEngaged",
+      "Hands": "whTwoHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "DISORIENT",
+            "Count": "2"
+          },
+          {
+            "Key": "KNOCKDOWN"
+          }
+        ]
+      },
+      "Range": "Engaged"
+    },
+    {
+      "Key": "WEIKFLAIL",
+      "Name": "Weik Flail",
+      "Description": "[H3]Weik Flail[h3]\nThings and Stuff\n[BR][BR]\nWielder can 'wind up' the flail by using a maneuver, causing the next attack with the weapon to gain +1 Damage and the Pierce 1 quality.\n[BR][BR]\nPlease see Rowler's Arg'garoks and Armaments for details.",
+      "Source": "Rowler's Arg'garoks and Armaments",
+      "Custom": "AddedItem",
+      "Type": "Melee",
+      "Categories": {
+        "Category": "Bludgeoning Melee"
+      },
+      "Encumbrance": "2",
+      "HP": "1",
+      "Price": "800",
+      "Rarity": "7",
+      "SkillKey": "MELEE",
+      "DamageAdd": "3",
+      "Crit": "3",
+      "SizeHigh": "10",
+      "RangeValue": "wrEngaged",
+      "Hands": "whOneHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "DISORIENT",
+            "Count": "2"
+          },
+          {
+            "Key": "SLOWFIRING",
+            "Count": "1"
+          },
+          {
+            "Key": "UNWIELDY",
+            "Count": "3"
+          }
+        ]
+      },
+      "Range": "Engaged"
+    },
+    {
+      "Key": "BRYARPISTOL",
+      "Name": "K-16 Bryar Pistol",
+      "Description": "[H3]K-16 Bryar Pistol[h3]\nPlease see Rowler's Arg'garoks and Armaments for details.",
+      "Source": "Rowler's Arg'garoks and Armaments",
+      "Custom": "AddedItem",
+      "BuiltInAttachments": {
+        "Key": "OVRCHARGEV"
+      },
+      "Type": "Energy Weapon",
+      "Categories": {
+        "Category": [
+          "Blaster Pistol",
+          "Blaster",
+          "Pistol"
+        ]
+      },
+      "Encumbrance": "2",
+      "HP": "2",
+      "Price": "750",
+      "Rarity": "7",
+      "SkillKey": "RANGLT",
+      "Damage": "5",
+      "Crit": "3",
+      "SizeHigh": "10",
+      "RangeValue": "wrMedium",
+      "Hands": "whOneHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": {
+          "Key": "ACCURATE",
+          "Count": "1"
+        }
+      },
+      "Range": "Medium"
+    },
+    {
+      "Key": "KAGEZAPSWORD",
+      "Name": "Electrosword",
+      "Description": "[H3]Electrosword[h3]\nPlease see page 162 of the Heroes on Both Sides Sourcebook for details.",
+      "Source": {
+        "_Page": "175",
+        "__text": "Heroes on Both Sides"
+      },
+      "Custom": "AddedItem",
+      "Type": "Melee",
+      "Categories": {
+        "Category": [
+          "Cutting Edge Melee",
+          "Powered Melee"
+        ]
+      },
+      "Encumbrance": "1",
+      "HP": "2",
+      "Price": "1000",
+      "Rarity": "7",
+      "Restricted": "true",
+      "SkillKey": "MELEE",
+      "DamageAdd": "3",
+      "Crit": "2",
+      "SizeHigh": "10",
+      "RangeValue": "wrEngaged",
+      "Hands": "whOneHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "ACCURATE",
+            "Count": "1"
+          },
+          {
+            "Key": "DEFENSIVE",
+            "Count": "1"
+          },
+          {
+            "Key": "PIERCE",
+            "Count": "3"
+          }
+        ]
+      },
+      "Range": "Engaged"
+    },
+    {
+      "Key": "SLUGCASTERREVOLVER",
+      "Name": "Bayard's Slugcaster Pistol",
+      "Description": "[H3]Bayard's Slugcaster Pistol[h3]\nThe Zillo-Tech Mk.VII \"Deadeye\" Five-Shot Slugcaster Pistol was created from the combination of a minimum of twofairly disparate designs. The frame is derived primarily from the Xet Model C \"Fiver\" slugthrower pistol, though expanded to allow for beefier internals and the forthcoming combination of technologies. The internal workings are similar to that of a Wookiee bowcaster, though the external polarizers have been integrated into the barrel itself. This turns the weapon into more of a handheld railgun than a bowcaster, emitting a warbling cracking noise when fired. The internals have been modified to also bathe the specialized slugs in energy from the added ignition of gas-based propulsion in each shell.\n[BR][BR]\nWhen reloading this weapon, the wielder may choose to load specialized ammunition into it in two different ways. First, each chamber may be individually loaded all at once with an action, allowing for different combinations of ammo types. Second, the wielder can simply reload all of the chambers at once with a maneuver, but they must all be of the same ammo type.\n[BR][BR]\nPlease see Rowler's Arg'garoks and Armaments for details.",
+      "Source": {
+        "_Page": "197",
+        "__text": "Force and Destiny Core Rulebook"
+      },
+      "Custom": "AddedItem",
+      "Type": "Energy Weapon",
+      "Categories": {
+        "Category": [
+          "Pistol",
+          "Bowcaster"
+        ]
+      },
+      "Encumbrance": "2",
+      "HP": "2",
+      "Price": "15000",
+      "Rarity": "10",
+      "Restricted": "true",
+      "SkillKey": "RANGLT",
+      "Damage": "8",
+      "Crit": "2",
+      "SizeHigh": "10",
+      "RangeValue": "wrMedium",
+      "Hands": "whOneHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "ACCURATE",
+            "Count": "1"
+          },
+          {
+            "Key": "KNOCKDOWN"
+          },
+          {
+            "Key": "LIMITEDAMMO",
+            "Count": "5"
+          },
+          {
+            "Key": "PIERCE",
+            "Count": "3"
+          },
+          {
+            "Key": "SUPERIOR"
+          }
+        ]
+      },
+      "Range": "Medium"
+    },
+    {
+      "Key": "THREESECTIONSTAFF",
+      "Name": "Three-Section Staff",
+      "Description": "[H3]Three-Section Staff[h3]\nPlease see Rowler's Arg'garoks and Armaments for details.",
+      "Source": "Rowler's Arg'garoks and Armaments",
+      "Custom": "AddedItem",
+      "Type": "Melee",
+      "Categories": {
+        "Category": "Bludgeoning Melee"
+      },
+      "Encumbrance": "3",
+      "HP": "1",
+      "Price": "500",
+      "Rarity": "8",
+      "SkillKey": "MELEE",
+      "DamageAdd": "2",
+      "Crit": "5",
+      "SizeHigh": "10",
+      "RangeValue": "wrEngaged",
+      "Hands": "whTwoHanded",
+      "Scale": "wsPersonal",
+      "Qualities": {
+        "Quality": [
+          {
+            "Key": "DEFENSIVE",
+            "Count": "1"
+          },
+          {
+            "Key": "DISORIENT",
+            "Count": "1"
+          },
+          {
+            "Key": "UNWIELDY",
+            "Count": "3"
+          }
+        ]
+      },
+      "Range": "Engaged"
+    }
+  ],
+  "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+  "_xmlns:xsd": "http://www.w3.org/2001/XMLSchema"
+}

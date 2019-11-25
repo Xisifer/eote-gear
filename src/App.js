@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import DatatablePage from "./components/DatatablePage.js"
+import DatatablePage2 from "./components/DatatablePage2.js"
 import './App.css';
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React AS A DUMB FACE
-        </a>
-      </header>
+      <div className="header">
+        <h2>Online XML to JSON Converter: </h2>
+        <a href="https://onlinexmltools.com/convert-xml-to-json">https://onlinexmltools.com/convert-xml-to-json</a>
+      </div>
+      <DatatablePage2 />
     </div>
   );
 }
