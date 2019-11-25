@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<Weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Weapon>
+    <Key>POWERHAMMER</Key>
+    <Name>Power Hammer</Name>
+    <Description>[H3]Power Hammer[h3]
+The Zillo-Tech Mk.XXVIIa Power Hammer is a high-tech sledgehammer manufactured of high-strength, ultra-light, ultra-dense materials and also includes a powered kinetic energy storage device to increase knockback. 
+[BR][BR]
+The storage device is incredibly durable, and can survive damage that would otherwise break the weapon, but it comes with one major flaw. The amount of energy required means that in a mere four or five durasteel-crumpling blows will drain a standard power pack. While this doesn't diminish the weapon's weight and raw impact power, the lack of a concussive blast of kinetic energy weakens the impact a fair amount. Additionally, the inertial dampeners are powered by the same energy source, causing the weapon to become incredibly unwieldy when unpowered.
+[BR][BR]
+When the power pack is drained after using up the Limited Ammo 5 quality, the weapon loses its Concussive 1 and Pierce 1 qualities, and gains the Inaccurate 1 and Unwieldy 3 qualities.
+[BR][BR]
+Please see Rowler's Arg'garoks and Armaments for more details.</Description>
+    <Source>Rowler's Arg'garoks and Armaments</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Melee</Type>
+    <Categories>
+      <Category>Bludgeoning Melee</Category>
+      <Category>Powered Melee</Category>
+    </Categories>
+    <Encumbrance>5</Encumbrance>
+    <HP>2</HP>
+    <Price>1500</Price>
+    <Rarity>7</Rarity>
+    <Restricted>true</Restricted>
+    <SkillKey>MELEE</SkillKey>
+    <DamageAdd>5</DamageAdd>
+    <Crit>4</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrEngaged</RangeValue>
+    <Hands>whTwoHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>CONCUSSIVE</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>CUMBERSOME</Key>
+        <Count>4</Count>
+      </Quality>
+      <Quality>
+        <Key>KNOCKDOWN</Key>
+      </Quality>
+      <Quality>
+        <Key>LIMITEDAMMO</Key>
+        <Count>5</Count>
+      </Quality>
+      <Quality>
+        <Key>PIERCE</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>SUNDER</Key>
+      </Quality>
+    </Qualities>
+    <Range>Engaged</Range>
+  </Weapon>
+  <Weapon>
+    <Key>BURSTHAMMER</Key>
+    <Name>Burst Hammer</Name>
+    <Description>[H3]Burst Hammer[h3]
+Wielder suffers 1 Strain with every combat check made with this weapon.
+[BR][BR]
+Please see Rowler's Arg'garoks and Armaments for details.</Description>
+    <Source>Rowler's Arg'garoks and Armaments</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Melee</Type>
+    <Categories>
+      <Category>Bludgeoning Melee</Category>
+      <Category>Powered Melee</Category>
+    </Categories>
+    <Encumbrance>6</Encumbrance>
+    <HP>1</HP>
+    <Price>1750</Price>
+    <Rarity>8</Rarity>
+    <Restricted>true</Restricted>
+    <SkillKey>MELEE</SkillKey>
+    <DamageAdd>4</DamageAdd>
+    <Crit>4</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrEngaged</RangeValue>
+    <Hands>whTwoHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>BLAST</Key>
+        <Count>6</Count>
+      </Quality>
+      <Quality>
+        <Key>BURN</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>CUMBERSOME</Key>
+        <Count>3</Count>
+      </Quality>
+      <Quality>
+        <Key>KNOCKDOWN</Key>
+      </Quality>
+      <Quality>
+        <Key>UNWIELDY</Key>
+        <Count>3</Count>
+      </Quality>
+    </Qualities>
+    <Range>Engaged</Range>
+  </Weapon>
+  <Weapon>
+    <Key>SLEDGEHAMMER</Key>
+    <Name>Sledgehammer</Name>
+    <Description>[H3]Sledgehammer[h3]
+Please see Rowler's Arg'garoks and Armaments for details.</Description>
+    <Source>Rowler's Arg'garoks and Armaments</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Melee</Type>
+    <Categories>
+      <Category>Bludgeoning Melee</Category>
+    </Categories>
+    <Encumbrance>4</Encumbrance>
+    <HP>1</HP>
+    <Price>215</Price>
+    <Rarity>3</Rarity>
+    <SkillKey>MELEE</SkillKey>
+    <DamageAdd>3</DamageAdd>
+    <Crit>5</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrEngaged</RangeValue>
+    <Hands>whTwoHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>DISORIENT</Key>
+        <Count>2</Count>
+      </Quality>
+      <Quality>
+        <Key>KNOCKDOWN</Key>
+      </Quality>
+    </Qualities>
+    <Range>Engaged</Range>
+  </Weapon>
+  <Weapon>
+    <Key>POWERBAT</Key>
+    <Name>Corellian Powerbat</Name>
+    <Description>[H3]Corellian Powerbat[h3]
+Please see Rowler's Arg'garoks and Armaments for details.</Description>
+    <Source Page="46">Collapse of the Republic</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Melee</Type>
+    <Categories>
+      <Category>Bludgeoning Melee</Category>
+      <Category>Powered Melee</Category>
+    </Categories>
+    <Encumbrance>3</Encumbrance>
+    <HP>3</HP>
+    <Price>700</Price>
+    <Rarity>6</Rarity>
+    <SkillKey>MELEE</SkillKey>
+    <DamageAdd>3</DamageAdd>
+    <Crit>4</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrEngaged</RangeValue>
+    <Hands>whTwoHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>DISORIENT</Key>
+        <Count>2</Count>
+      </Quality>
+      <Quality>
+        <Key>KNOCKDOWN</Key>
+      </Quality>
+    </Qualities>
+    <Range>Engaged</Range>
+  </Weapon>
+  <Weapon>
+    <Key>WEIKFLAIL</Key>
+    <Name>Weik Flail</Name>
+    <Description>[H3]Weik Flail[h3]
+Things and Stuff
+[BR][BR]
+Wielder can 'wind up' the flail by using a maneuver, causing the next attack with the weapon to gain +1 Damage and the Pierce 1 quality.
+[BR][BR]
+Please see Rowler's Arg'garoks and Armaments for details.</Description>
+    <Source>Rowler's Arg'garoks and Armaments</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Melee</Type>
+    <Categories>
+      <Category>Bludgeoning Melee</Category>
+    </Categories>
+    <Encumbrance>2</Encumbrance>
+    <HP>1</HP>
+    <Price>800</Price>
+    <Rarity>7</Rarity>
+    <SkillKey>MELEE</SkillKey>
+    <DamageAdd>3</DamageAdd>
+    <Crit>3</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrEngaged</RangeValue>
+    <Hands>whOneHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>DISORIENT</Key>
+        <Count>2</Count>
+      </Quality>
+      <Quality>
+        <Key>SLOWFIRING</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>UNWIELDY</Key>
+        <Count>3</Count>
+      </Quality>
+    </Qualities>
+    <Range>Engaged</Range>
+  </Weapon>
+  <Weapon>
+    <Key>BRYARPISTOL</Key>
+    <Name>K-16 Bryar Pistol</Name>
+    <Description>[H3]K-16 Bryar Pistol[h3]
+Please see Rowler's Arg'garoks and Armaments for details.</Description>
+    <Source>Rowler's Arg'garoks and Armaments</Source>
+    <Custom>AddedItem</Custom>
+    <BuiltInAttachments>
+      <Key>OVRCHARGEV</Key>
+    </BuiltInAttachments>
+    <Type>Energy Weapon</Type>
+    <Categories>
+      <Category>Blaster Pistol</Category>
+      <Category>Blaster</Category>
+      <Category>Pistol</Category>
+    </Categories>
+    <Encumbrance>2</Encumbrance>
+    <HP>2</HP>
+    <Price>750</Price>
+    <Rarity>7</Rarity>
+    <SkillKey>RANGLT</SkillKey>
+    <Damage>5</Damage>
+    <Crit>3</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrMedium</RangeValue>
+    <Hands>whOneHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>ACCURATE</Key>
+        <Count>1</Count>
+      </Quality>
+    </Qualities>
+    <Range>Medium</Range>
+  </Weapon>
+  <Weapon>
+    <Key>KAGEZAPSWORD</Key>
+    <Name>Electrosword</Name>
+    <Description>[H3]Electrosword[h3]
+Please see page 162 of the Heroes on Both Sides Sourcebook for details.</Description>
+    <Source Page="175">Heroes on Both Sides</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Melee</Type>
+    <Categories>
+      <Category>Cutting Edge Melee</Category>
+      <Category>Powered Melee</Category>
+    </Categories>
+    <Encumbrance>1</Encumbrance>
+    <HP>2</HP>
+    <Price>1000</Price>
+    <Rarity>7</Rarity>
+    <Restricted>true</Restricted>
+    <SkillKey>MELEE</SkillKey>
+    <DamageAdd>3</DamageAdd>
+    <Crit>2</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrEngaged</RangeValue>
+    <Hands>whOneHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>ACCURATE</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>DEFENSIVE</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>PIERCE</Key>
+        <Count>3</Count>
+      </Quality>
+    </Qualities>
+    <Range>Engaged</Range>
+  </Weapon>
+  <Weapon>
+    <Key>SLUGCASTERREVOLVER</Key>
+    <Name>Bayard's Slugcaster Pistol</Name>
+    <Description>[H3]Bayard's Slugcaster Pistol[h3]
+The Zillo-Tech Mk.VII "Deadeye" Five-Shot Slugcaster Pistol was created from the combination of a minimum of twofairly disparate designs. The frame is derived primarily from the Xet Model C "Fiver" slugthrower pistol, though expanded to allow for beefier internals and the forthcoming combination of technologies. The internal workings are similar to that of a Wookiee bowcaster, though the external polarizers have been integrated into the barrel itself. This turns the weapon into more of a handheld railgun than a bowcaster, emitting a warbling cracking noise when fired. The internals have been modified to also bathe the specialized slugs in energy from the added ignition of gas-based propulsion in each shell.
+[BR][BR]
+When reloading this weapon, the wielder may choose to load specialized ammunition into it in two different ways. First, each chamber may be individually loaded all at once with an action, allowing for different combinations of ammo types. Second, the wielder can simply reload all of the chambers at once with a maneuver, but they must all be of the same ammo type.
+[BR][BR]
+Please see Rowler's Arg'garoks and Armaments for details.</Description>
+    <Source Page="197">Force and Destiny Core Rulebook</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Energy Weapon</Type>
+    <Categories>
+      <Category>Pistol</Category>
+      <Category>Bowcaster</Category>
+    </Categories>
+    <Encumbrance>2</Encumbrance>
+    <HP>2</HP>
+    <Price>15000</Price>
+    <Rarity>10</Rarity>
+    <Restricted>true</Restricted>
+    <SkillKey>RANGLT</SkillKey>
+    <Damage>8</Damage>
+    <Crit>2</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrMedium</RangeValue>
+    <Hands>whOneHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>ACCURATE</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>KNOCKDOWN</Key>
+      </Quality>
+      <Quality>
+        <Key>LIMITEDAMMO</Key>
+        <Count>5</Count>
+      </Quality>
+      <Quality>
+        <Key>PIERCE</Key>
+        <Count>3</Count>
+      </Quality>
+      <Quality>
+        <Key>SUPERIOR</Key>
+      </Quality>
+    </Qualities>
+    <Range>Medium</Range>
+  </Weapon>
+  <Weapon>
+    <Key>THREESECTIONSTAFF</Key>
+    <Name>Three-Section Staff</Name>
+    <Description>[H3]Three-Section Staff[h3]
+Please see Rowler's Arg'garoks and Armaments for details.</Description>
+    <Source>Rowler's Arg'garoks and Armaments</Source>
+    <Custom>AddedItem</Custom>
+    <Type>Melee</Type>
+    <Categories>
+      <Category>Bludgeoning Melee</Category>
+    </Categories>
+    <Encumbrance>3</Encumbrance>
+    <HP>1</HP>
+    <Price>500</Price>
+    <Rarity>8</Rarity>
+    <SkillKey>MELEE</SkillKey>
+    <DamageAdd>2</DamageAdd>
+    <Crit>5</Crit>
+    <SizeHigh>10</SizeHigh>
+    <RangeValue>wrEngaged</RangeValue>
+    <Hands>whTwoHanded</Hands>
+    <Scale>wsPersonal</Scale>
+    <Qualities>
+      <Quality>
+        <Key>DEFENSIVE</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>DISORIENT</Key>
+        <Count>1</Count>
+      </Quality>
+      <Quality>
+        <Key>UNWIELDY</Key>
+        <Count>3</Count>
+      </Quality>
+    </Qualities>
+    <Range>Engaged</Range>
+  </Weapon>
+</Weapons>
