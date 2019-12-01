@@ -5,15 +5,14 @@ import {Button} from 'react-bootstrap'
 
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
-import data from './data/CustomWeapons.json'
+import data from './data/weapons.json'
 import qualities from './data/qualities.json'
-import eoteWeapons from "./data/EOTEWeapons.json"
 
 
-const weapons = eoteWeapons.Weapon;
+const weapons = data.Weapon;
 
 
-class App extends Component {
+class WeaponTable extends Component {
 
 
 
@@ -21,8 +20,6 @@ class App extends Component {
  getQuality = (event, quality) => {
 
   console.log(qualities[quality])
-
-  console.log(eoteWeapons)
 
   // event.preventDefault()
 
@@ -87,7 +84,7 @@ class App extends Component {
     {
       id: 'range', 
       Header: 'Range',
-      accessor: row => row.RangeValue.substring(2)
+      accessor: row => row.Range
     },
     {
       id: 'qualities',
@@ -119,7 +116,7 @@ class App extends Component {
     {
       id: 'price', 
       Header: 'Price',
-      accessor: row => row.Price
+      accessor: row => row.Range
     }
 
   ]
@@ -133,4 +130,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default WeaponTable;
