@@ -20,3 +20,16 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+.category {
+  border:5px solid red;
+  margin: 15px;
+  font-size:12px;
+}
+
+.quality {
+  border:5px solid purple;
+  margin: 15px;
+  font-size:12px;
+}
