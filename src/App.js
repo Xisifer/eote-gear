@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import {Button} from 'react-bootstrap'
+import {Button, Popover, OverlayTrigger} from 'react-bootstrap'
 
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
@@ -15,7 +15,20 @@ const weapons = eoteWeapons.Weapon;
 
 class App extends Component {
 
-
+  // popover = (
+  //   <Popover id="popover-basic">
+  //     <Popover.Title as="h3">Popover right</Popover.Title>
+  //     <Popover.Content>
+  //       And here's some <strong>amazing</strong> content. It's very engaging.
+  //       right?
+  //     </Popover.Content>
+  //   </Popover>
+  // );
+  // Example = () => (
+  //   <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+  //     <Button variant="success">Click me to see</Button>
+  //   </OverlayTrigger>
+  // );
 
 
  getQuality = (event, quality) => {
@@ -45,9 +58,18 @@ class App extends Component {
 
 
     const SkillKey = {
-      RANGLT: "Ranged: Light", 
-      MELEE: "Melee",
-      RANGHV: "Ranged: Heavy"
+      "RANGLT": "Ranged: Light", 
+      "RANGHV": "Ranged: Heavy",
+      "GUNN": "Gunnery",
+      "BRAWL": "Brawl",
+      "MELEE": "Melee",
+      "LTSABER": "Lightsaber",
+      "MECH": "Mechanics",
+      "SURV": "Survival",
+      "SKUL": "Skulduggery",
+      "STUNSETTING": "Stun Setting"
+
+
       // etc, etc, etc....
   }
 
@@ -96,13 +118,26 @@ class App extends Component {
 
       Cell: props => props.value.length ? props.value.map(
           quality => <ul>
-                        <Button 
-                          variant="info" 
-                          onClick = {(event) => this.getQuality(event, quality.Key)}
-                        >
-                          {quality.Key} {quality.Count}
-                        </Button>
-                    </ul>
+
+
+            <Popover 
+            id="popover-basic"
+            onClick = {(event) => this.getQuality(event, quality.Key)}
+            >
+              <Popover.Title as="h3">{quality.Key} {quality.Count}</Popover.Title>
+              <Popover.Content>
+              {qualities[quality]}
+              </Popover.Content>
+            </Popover>
+
+              {/* <Button 
+                variant="info" 
+                onClick = {(event) => this.getQuality(event, quality.Key)}
+              >
+                {quality.Key} {quality.Count}
+              </Button> */}
+
+          </ul>
           // <span className='quality'>{quality.Key}{quality.Count}</span>
         )
         : <ul>
