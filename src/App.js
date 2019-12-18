@@ -1,53 +1,88 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import {Button, Popover, OverlayTrigger} from 'react-bootstrap'
+import {Button, Popover, OverlayTrigger, Modal} from 'react-bootstrap'
 
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
-import data from './data/CustomWeapons.json'
+// import data from './data/CustomWeapons.json'
 import qualities from './data/qualities.json'
 import eoteWeapons from "./data/EOTEWeapons.json"
+
+import TextModal from "./components/DescriptionModal"
 
 
 const weapons = eoteWeapons.Weapon;
 
+const SkillKey = {
+  "RANGLT": "Ranged: Light", 
+  "RANGHV": "Ranged: Heavy",
+  "GUNN": "Gunnery",
+  "BRAWL": "Brawl",
+  "MELEE": "Melee",
+  "LTSABER": "Lightsaber",
+  "MECH": "Mechanics",
+  "SURV": "Survival",
+  "SKUL": "Skulduggery",
+  "STUNSETTING": "Stun Setting",
+
+
+
+  // etc, etc, etc....
+}
+
+const QualityKey =  {
+"ACCURATE": "Accurate",
+"AUTOFIRE": "Auto-Fire",
+"BREACH": "Breach",
+"BURN": "Burn",
+"BLAST": "Blast",
+"CONCUSSIVE": "Concussive",
+"CORTOSIS": "Cortosis",
+"CUMBERSOME": "Cumbersome",
+"DEFENSIVE": "Defensive",
+"DEFLECTION": "Deflection",
+"DISORIENT": "Disorient",
+"ENSNARE": "Ensnare",
+"GUIDED": "Guided",
+"KNOCKDOWN": "Knockdown",
+"INACCURATE": "Inaccurate",
+"INFERIOR": "Inferior",
+"ION": "Ion",
+"LIMITEDAMMO": "Limited Ammo",
+"LINKED": "Linked",
+"PIERCE": "Pierce",
+"PREPARE": "Prepare",
+"SLOWFIRING": "Slow-Firing",
+"STUNSETTING": "Stun Setting",
+"STUNDAMAGE": "Stun Damage",
+"SUNDER": "Sunder",
+"SUPERIOR": "Superior",
+"TRACTOR": "Tractor",
+"VICIOUS": "Vicious"
+}
+
+
 
 class App extends Component {
-
-  // popover = (
-  //   <Popover id="popover-basic">
-  //     <Popover.Title as="h3">Popover right</Popover.Title>
-  //     <Popover.Content>
-  //       And here's some <strong>amazing</strong> content. It's very engaging.
-  //       right?
-  //     </Popover.Content>
-  //   </Popover>
-  // );
-  // Example = () => (
-  //   <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-  //     <Button variant="success">Click me to see</Button>
-  //   </OverlayTrigger>
-  // );
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+      qualityText: ""
+    };
+    // this.toggle = this.toggle.bind(this);
+  }
 
 
- getQuality = (event, quality) => {
+ getQuality = async(event, quality) => {
+// Here we're waiting for the response from State before we're setting State
+  await this.setState({qualityText:qualities[quality]});
 
-  console.log(qualities[quality])
-
-  console.log(eoteWeapons)
-
-
-
-  // event.preventDefault()
-
-  // console.log("This quality is...", qualities.Key)
-
-  // console.log(Key)
-
-  // const quality = Key
-
-  // console.log("Quality is: ", qualities.quality)
+  console.log("this.state.qualityText is: ", this.state.qualityText)
+  this.setState(prevState => ({
+    modal: !prevState.modal
+  }));
 
  }
   
@@ -56,25 +91,19 @@ class App extends Component {
 
 
   render() {
-    console.log(weapons);
 
 
-    const SkillKey = {
-      "RANGLT": "Ranged: Light", 
-      "RANGHV": "Ranged: Heavy",
-      "GUNN": "Gunnery",
-      "BRAWL": "Brawl",
-      "MELEE": "Melee",
-      "LTSABER": "Lightsaber",
-      "MECH": "Mechanics",
-      "SURV": "Survival",
-      "SKUL": "Skulduggery",
-      "STUNSETTING": "Stun Setting",
-      "LIMITEDAMMO": "Limited Ammo"
+    const qualityText = this.state.qualityText;
 
 
-      // etc, etc, etc....
-  }
+
+
+  // {(qualityText != "") ? <div> {qualityText} </div> : <div></div>}
+
+    
+
+
+
 
 
     const columns = [{
@@ -123,27 +152,26 @@ class App extends Component {
           quality => <ul>
 
 
-            <Popover 
-            id="popover-basic"
-            onClick = {(event) => this.getQuality(event, quality.Key)}
-            >
-              <Popover.Title as="h3">{quality.Key} {quality.Count}</Popover.Title>
-              <Popover.Content>
-              {qualities[quality]}
-              </Popover.Content>
-            </Popover>
+
+
 
               {/* <Button 
                 variant="info" 
                 onClick = {(event) => this.getQuality(event, quality.Key)}
               >
-                {quality.Key} {quality.Count}
+                {QualityKey[quality.Key]} {quality.Count}
               </Button> */}
+              <TextModal
+                qualityText = {qualityText}
+                qualityName = {QualityKey[quality.Key]}
+                clicker = {(event) => this.getQuality(event, quality.Key)}
+                modal = {this.state.modal}
+              />
 
           </ul>
-          // <span className='quality'>{quality.Key}{quality.Count}</span>
         )
         : <ul>
+
           <Button 
             variant="info" 
             onClick = {(event) => this.getQuality(event, props.value.Key)}
@@ -158,6 +186,17 @@ class App extends Component {
       id: 'price', 
       Header: 'Price',
       accessor: row => row.Price
+    },
+    {
+      id: 'description', 
+      Header: 'Description',
+      accessor: row => row.Description
+    },
+    {
+      id: 'miscdesc', 
+      Header: 'Misc Description',
+      accessor: 'BaseMods.Mod.MiscDesc'
+      // accessor: row => row.BaseMods.Mod.MiscDesc
     }
 
   ]
