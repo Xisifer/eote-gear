@@ -37,6 +37,8 @@ class App extends Component {
 
   console.log(eoteWeapons)
 
+
+
   // event.preventDefault()
 
   // console.log("This quality is...", qualities.Key)
@@ -67,7 +69,8 @@ class App extends Component {
       "MECH": "Mechanics",
       "SURV": "Survival",
       "SKUL": "Skulduggery",
-      "STUNSETTING": "Stun Setting"
+      "STUNSETTING": "Stun Setting",
+      "LIMITEDAMMO": "Limited Ammo"
 
 
       // etc, etc, etc....
@@ -145,7 +148,7 @@ class App extends Component {
             variant="info" 
             onClick = {(event) => this.getQuality(event, props.value.Key)}
           >
-            {props.value.Key} {props.value.Count}
+            {SkillKey[props.value.Key]} {props.value.Count}
           </Button>
       </ul>
         // <span className='quality'>{props.value.Key} {props.value.Count}</span>
