@@ -35,7 +35,7 @@ class TextModal extends React.Component {
         // console.log(this.state.modal);
         return (
             <div className="center-buttons guest-login-button-modal">
-                <Button className="btn-lg btn-primary" 
+                <Button className="btn-sm btn-primary" 
                 
                 // onClick={this.props.clicker}
                 onClick={this.props.clicker}
