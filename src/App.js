@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import {Button, Container} from 'react-bootstrap'
+import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
@@ -33,8 +34,17 @@ class App extends Component {
 
     return (
       <Container>
-        <p>HELLO WORLD</p>
-        <WeaponsReactTableFilter/>
+        {/* <Router>
+          <Link to={WeaponsReactTable}>react-table</Link>
+          <Link to={WeaponsReactTableFilter}>react-table-filter</Link>
+          <Switch>
+            <Route path="/" component={WeaponsReactTable} />
+            <Route path="/filter" component={WeaponsReactTableFilter} />
+          </Switch>
+
+
+        </Router> */}
+        <WeaponsReactTable/>
       </Container>
     )
   }

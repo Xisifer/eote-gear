@@ -7,23 +7,21 @@ const TextModal2 = (props) => {
     className
   } = props;
 
+  // const [modal, setModal] = useState(false);
+
+  // const toggle = () => {
+  //     console.log('before setmodal call',props.modal)
+  //     setModal(!props.modal);
+  //     console.log('after setmodal call',props.modal)
+  //     props.clicker();
+      
+  //   };
+
+  
   const [modal, setModal] = useState(false);
 
-  const toggle = () => {
-      console.log('before setmodal call',modal)
-      setModal(!modal);
-      console.log('after setmodal call',modal)
-      props.clicker();
-      
-    };
+  const toggle = () => setModal(!modal);
 
-    // const myfunc = async () => {
-    //     console.log("Entering myfunc()...");
-    //     console.log("awaiting toggle()...");
-    //     await toggle();
-    //     console.log("running clicker()!");
-    //     // props.clicker()
-    // }
 
     // =============================================
     // These things are getting passed down...
@@ -49,7 +47,7 @@ const TextModal2 = (props) => {
       <Modal isOpen={modal} fade={false} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>{props.qualityName} {props.qualityNumber}</ModalHeader>
         <ModalBody>
-          {props.qualityText}
+          {props.qualityText} POTATO
         </ModalBody>
         <ModalFooter>
           {/* <Button color="primary" onClick={toggle}>{props.qualityName}</Button>{' '} */}

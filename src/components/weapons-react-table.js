@@ -69,18 +69,18 @@ class WeaponsReactTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false,
+      // modal: true,
       qualityText: ""
     };
     // this.toggle = this.toggle.bind(this);
   }
 
 
- getQuality = async(event, quality) => {
+ getQuality = (event, quality) => {
+   console.log("Entering getQuality()...");
 // Here we're waiting for the response from State before we're setting State
-  await this.setState({qualityText:qualities[quality]});
+  this.setState({qualityText:qualities[quality]});
 
-  console.log("this.state.qualityText is: ", this.state.qualityText)
   
 
  }
@@ -92,8 +92,13 @@ class WeaponsReactTable extends Component {
 
 
     const qualityText = this.state.qualityText;
+    // when i set state, react qwill re render the component with the new state
+    // since i set state.qualityText in getQuality(), in render I will have a new value
+    // for this.state.qualityText
+    console.log("this.state.qualityText is: ", this.state.qualityText)
 
 
+    console.log("this.state.modal is: ", this.state.modal)
 
 
   // {(qualityText != "") ? <div> {qualityText} </div> : <div></div>}
@@ -149,18 +154,8 @@ class WeaponsReactTable extends Component {
       Cell: props => props.value.length ? props.value.map(
           quality => <ul>
 
-
-
-
-
-              {/* <Button 
-                variant="info" 
-                onClick = {(event) => this.getQuality(event, quality.Key)}
-              >
-                {QualityKey[quality.Key]} {quality.Count}
-              </Button> */}
               <TextModal2
-                qualityText = {qualityText}
+                qualityText = {qualities[quality.Key]}
                 qualityName = {QualityKey[quality.Key]}
                 qualityNumber = {quality.Count}
                 clicker = {(event) => this.getQuality(event, quality.Key)}
@@ -178,18 +173,7 @@ class WeaponsReactTable extends Component {
                 clicker = {(event) => this.getQuality(event, props.value.Key)}
                 modal = {this.state.modal}
               />
-
-
-
-
-          {/* <Button 
-            variant="info" 
-            onClick = {(event) => this.getQuality(event, props.value.Key)}
-          >
-            {SkillKey[props.value.Key]} {props.value.Count}
-          </Button> */}
       </ul>
-        // <span className='quality'>{props.value.Key} {props.value.Count}</span>
 
     },
     {
