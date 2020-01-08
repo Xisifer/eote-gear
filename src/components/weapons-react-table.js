@@ -5,7 +5,8 @@ import {Button, Container} from 'react-bootstrap'
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
 import data from '../data/CustomWeapons.json'
-import qualities from '../data/qualities.json'
+import generateQualities from '../data/qualities.js'
+// import generateQualities from '../data/qualities.json'
 import eoteWeapons from "../data/EOTEWeapons.json"
 
 import TextModal from "./DescriptionModal"
@@ -16,7 +17,7 @@ const weapons = data.Weapon;
 
 const SkillKey = {
   "RANGLT": "Ranged: Light", 
-  "RANGHV": "Ranged: Heavy",
+  "RANGHVY": "Ranged: Heavy",
   "GUNN": "Gunnery",
   "BRAWL": "Brawl",
   "MELEE": "Melee",
@@ -76,11 +77,13 @@ class WeaponsReactTable extends Component {
   }
 
 
- getQuality = (event, quality) => {
+ getQuality = ( quality) => {
    console.log("Entering getQuality()...");
 // Here we're waiting for the response from State before we're setting State
-  this.setState({qualityText:qualities[quality]});
+  // this.setState({qualityText:generateQualities[quality]});
 
+console.log("GetQuality thinks that props is: ", quality);
+  generateQualities({qualityNumber: quality});
   
 
  }
@@ -155,10 +158,10 @@ class WeaponsReactTable extends Component {
           quality => <ul>
 
               <TextModal2
-                qualityText = {qualities[quality.Key]}
+                qualityText = {generateQualities[quality.Key]}
                 qualityName = {QualityKey[quality.Key]}
                 qualityNumber = {quality.Count}
-                clicker = {(event) => this.getQuality(event, quality.Key)}
+                onClick = {(event) => this.getQuality(quality.Count)}
                 modal = {this.state.modal}
               />
 

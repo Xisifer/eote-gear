@@ -44,14 +44,21 @@ const TextModal2 = (props) => {
         onClick={toggle}>
             {props.qualityName} {props.qualityNumber}
         </Button>
-      <Modal isOpen={modal} fade={false} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>{props.qualityName} {props.qualityNumber}</ModalHeader>
+      <Modal 
+      isOpen={modal} 
+      fade={false} 
+      toggle={toggle} 
+      className={className}>
+        <ModalHeader toggle={toggle}>
+          {props.qualityName} {props.qualityNumber}
+          </ModalHeader>
         <ModalBody>
-          {props.qualityText} POTATO
+
+          {props.qualityText} 
         </ModalBody>
         <ModalFooter>
           {/* <Button color="primary" onClick={toggle}>{props.qualityName}</Button>{' '} */}
-          <Button color="secondary" onClick={toggle}>Cancel</Button>
+          <Button color="secondary" onClick={toggle}>Close</Button>
         </ModalFooter>
       </Modal>
     </div>

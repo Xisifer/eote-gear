@@ -44,6 +44,10 @@ class App extends Component {
 
 
         </Router> */}
+        <p>
+          This is the area of the App that is OUTSIDE of the React Table.
+          POTATO.
+        </p>
         <WeaponsReactTable/>
       </Container>
     )
