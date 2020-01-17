@@ -6,6 +6,16 @@
   height: 40vmin;
 }
 
+/* .rt-td {
+  min-width: fit-content;
+} */
+
+.modal-body {
+    font-family: "EotE_Symbol-Regular_v1";
+    src: local('EotESymbols');
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

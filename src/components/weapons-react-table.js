@@ -9,7 +9,7 @@ import generateQualities from '../data/qualities.js'
 // import generateQualities from '../data/qualities.json'
 import eoteWeapons from "../data/EOTEWeapons.json"
 
-import TextModal from "./DescriptionModal"
+// import TextModal from "./DescriptionModal"
 import TextModal2 from "./DescriptionModal2"
 
 
@@ -170,7 +170,7 @@ console.log("GetQuality thinks that props is: ", quality);
         : <ul>
 
               <TextModal2
-                qualityText = {qualityText}
+                qualityText = {generateQualities[props.value.Key]}
                 qualityName = {QualityKey[props.value.Key]}
                 qualityNumber = {props.value.count}
                 clicker = {(event) => this.getQuality(event, props.value.Key)}
