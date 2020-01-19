@@ -5,7 +5,7 @@ import { Button, Container } from 'react-bootstrap'
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
 import data from '../data/CustomWeapons.json'
-import generateQualities from '../data/qualities.js'
+import generateQualities from '../data/qualities.jsx'
 // import generateQualities from '../data/qualities.json'
 import eoteWeapons from "../data/EOTEWeapons.json"
 
