@@ -44,7 +44,7 @@ const allQualities = {
         <br/><br/>
         Jumping into a body of water stops the damage immediately. Both situations assume the flame is from actual combustion rather than a chemical reaction. With the latter, there is usually little the victim can do.</p></div>)},
     "BLAST": props => {return(
-        <div><p>The weapon has a large spread, an explosive blast, or similar area of effect, like the detonation of a grenade or a warhead fired from a missile launcher. If the attack is successful and Blast activates, each character (friend or foe) Engaged with the original target suffers <font size="5">{props.qualityNumber}</font> Wounds (plus an additional Wound per Success as usual). 
+        <div><p>The weapon has a large spread, an explosive blast, or similar area of effect, like the detonation of a grenade or a warhead fired from a missile launcher. If the attack is successful and Blast activates, each character (friend or foe) Engaged with the original target suffers <font size="5">{props.qualityNumber}</font> <font color="red"><b>Wounds</b></font> (plus an additional <font color="red"><b>Wound</b></font> per Success as usual). 
         <br/><br/> 
         In a relatively small and enclosed area, the Game Master might decide that everyone in the room suffers damage. 
         <br/><br/> 
@@ -60,7 +60,7 @@ const allQualities = {
     "CUMBERSOME": props => {return(
         <div><p>A Cumbersome weapon is large, unwieldy, awkward, or heavy. To wield a Cumbersome weapon properly, the character needs a Brawn characteristic equal to or greater than <font size="5">{props.qualityNumber}</font>. For each point of Brawn the character is deficient, he must increase the difficulty of all checks made while using the weapon by one.</p></div>)},
     "DEFENSIVE": props => {return(
-        <div><p>Defensive weapons are particularly good at fending off incoming melee attacks. A character wielding a weapon with the Defensive quality increases his melee defense by the weapon's Defensive rating.</p></div>)},
+        <div><p>Defensive weapons are particularly good at fending off incoming melee attacks. A character wielding a weapon with the Defensive quality increases his melee defense by <font size="5">{props.qualityNumber}</font>.</p></div>)},
     "DEFLECTION": props => {return(
         <div><p>An item with the Deflection quality increases the wearer's ranged defense equal to its Deflection rating.</p></div>)},
     "DISORIENT": props => {return(
@@ -82,7 +82,7 @@ const allQualities = {
     "ION": props => {return(
         <div><p>Ion weapons are designed to affect electrical systems as opposed to dealing raw damage. They are fitted to ships to knock out opponents shields, sensors, and engines. They are shorter range than laser weapons, and deal larger amounts of damage, but their damage is dealt to the target as system strain (usually on vehicles). It is still reduced by armor and Soak. Droids are affected by ion weapons, taking damage to their strain threshold.</p></div>)},
     "LIMITEDAMMO": props => {return(
-        <div><p>some weapons fire particularly large or complex projectiles that cost significant amounts of credits, or are themselves a complete weapon that once launched is expended. A weapon with the Limited Ammo quality may be used to make <font size="5">{props.qualityNumber}</font> attacks before it must be reloaded with a maneuver.
+        <div><p>Some weapons fire particularly large or complex projectiles that cost significant amounts of credits, or are themselves a complete weapon that once launched is expended. A weapon with the Limited Ammo quality may be used to make <font size="5">{props.qualityNumber}</font> attacks before it must be reloaded with a maneuver.
         <br/><br/>
         In addition, each shot expends one of a limited number of rounds of ammo, which must be purchased or otherwise obtained before the weapon can be used. This also applies to grenades and other "one use" weapons which have the Limited Ammo 1 quality (here, the user is not "reloading" the grenade, but drawing another to use-—but mechanically they are equivalent).</p></div>)},
     "LINKED": props => {return(
@@ -94,13 +94,13 @@ const allQualities = {
     "PREPARE": props => {return(
         <div><p>Weapons with this quality require time to set up before being used. The user must perform <font size="5">{props.qualityNumber}</font> maneuvers before making attacks with that weapon.</p></div>)},
     "SLOWFIRING": props => {return(
-        <div><p>slow-Firing weapons tend to be large, heavy, emplacement- mounted weapons like the turbolasers found on capital ships, or planetary defense ion cannons. While they deal incredible damage, they need time to recharge or cool down between shots. A weapon's Slow-Firing rating dictates how quickly the weapon can be fired after an attack. For example, a heavy turbolaser with Slow-Firing 2 must wait two Rounds after being fired before it can be fired again.</p></div>)},
+        <div><p>Slow-Firing weapons tend to be large, heavy, emplacement- mounted weapons like the turbolasers found on capital ships, or planetary defense ion cannons. While they deal incredible damage, they need time to recharge or cool down between shots. A weapon's Slow-Firing rating dictates how quickly the weapon can be fired after an attack. For example, a heavy turbolaser with Slow-Firing 2 must wait two Rounds after being fired before it can be fired again.</p></div>)},
     "STUNSETTING": props => {return(
-        <div><p>A weapon with Stun causes strain to the target. When the Stun quality is activated, it inflicts strain equal to the weapon's Stun rating.</p></div>)},
+        <div><p>A weapon with <font color="blue"><b>Stun</b></font> causes strain to the target. When the <font color="blue"><b>Stun</b></font> quality is activated, it inflicts strain equal to the weapon's <font color="blue"><b>Stun</b></font> rating.</p></div>)},
     "STUNDAMAGE": props => {return(
-        <div><p>some weapons deal Stun damage instead of regular damage. In this case, the weapon deals damage as strain instead of wounds. This damage is still reduced by a target's soak. 
+        <div><p>Some weapons deal <font color="blue"><b>Stun</b></font> damage instead of regular damage. In this case, the weapon deals damage as strain instead of <font color="red"><b>Wounds</b></font>. This damage is still reduced by a target's soak. 
         <br/><br/>
-        A variant of this is a Stun setting. As a free action, the wielder can choose to switch the setting of his weapon to  stun. In this case, it does stun damage as described above. When weapons with a stun setting are used to deal stun damage, their range changes to short and cannot be increased.</p></div>)},
+        A variant of this is a <font color="blue"><b>Stun</b></font> setting. As a free action, the wielder can choose to switch the setting of his weapon to  <font color="blue"><b>Stun</b></font>. In this case, it does <font color="blue"><b>Stun</b></font> damage as described above. When weapons with a <font color="blue"><b>Stun</b></font> setting are used to deal <font color="blue"><b>Stun</b></font> damage, their range changes to short and cannot be increased.</p></div>)},
     "SUNDER": props => {return(
         <div><p>When activated, the attacker chooses one item openly wielded by the target (such as a weapon, shield, or item on a belt). That item is damaged one step: to Minor if undamaged, from Minor to Moderate, or from Moderate to Major. If a weapon already suffering Major damage is the target of a successful Sunder, it is destroyed. 
         <br/><br/>
