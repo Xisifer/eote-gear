@@ -76,24 +76,7 @@ class WeaponsReactTable extends Component {
     // this.toggle = this.toggle.bind(this);
   }
 
-
- getQuality = ( quality) => {
-   console.log("Entering getQuality()...");
-// Here we're waiting for the response from State before we're setting State
-  // this.setState({qualityText:generateQualities[quality]});
-
-  console.log("GetQuality thinks that props is: ", quality);
-  generateQualities({qualityNumber: quality});
-  
-
- }
-
-
-
-
   render() {
-
-
     const qualityText = this.state.qualityText;
     // when i set state, react qwill re render the component with the new state
     // since i set state.qualityText in getQuality(), in render I will have a new value
@@ -158,10 +141,9 @@ class WeaponsReactTable extends Component {
           quality => <ul>
 
               <TextModal2
-                qualityText = {generateQualities[quality.Key]}
+                qualityText = {generateQualities({qualityNumber: quality.Count})[quality.Key]}
                 qualityName = {QualityKey[quality.Key]}
                 qualityNumber = {quality.Count}
-                onClick = {() => this.getQuality(quality.Count)}
                 modal = {this.state.modal}
               />
 
@@ -170,10 +152,9 @@ class WeaponsReactTable extends Component {
         : <ul>
 
               <TextModal2
-                qualityText = {generateQualities[props.value.Key]}
+                qualityText = {generateQualities({qualityNumber: props.value.Count})[props.value.Key]}
                 qualityName = {QualityKey[props.value.Key]}
                 qualityNumber = {props.value.Count}
-                onClick = {() => this.getQuality(props.value.Count)}
                 modal = {this.state.modal}
               />
       </ul>
