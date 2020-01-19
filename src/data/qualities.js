@@ -31,4 +31,4 @@ const generateQualities = (props ={}) => {
     "VICIOUS": "When this weapon scores a critical injury or hit, the character adds ten times the Vicious rating to the critical roll. With Vicious 3, for example, the victim adds + 30 to his critical hit result."
 }
 }
-export default generateQualities();
+export default generateQualities;

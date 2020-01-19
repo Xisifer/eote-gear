@@ -20,7 +20,11 @@ const TextModal2 = (props) => {
   
   const [modal, setModal] = useState(false);
 
-  const toggle = () => setModal(!modal);
+  const toggle = () => {
+    props.onClick()
+    setModal(!modal)
+  };
+
 
 
     // =============================================

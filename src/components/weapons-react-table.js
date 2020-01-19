@@ -82,7 +82,7 @@ class WeaponsReactTable extends Component {
 // Here we're waiting for the response from State before we're setting State
   // this.setState({qualityText:generateQualities[quality]});
 
-console.log("GetQuality thinks that props is: ", quality);
+  console.log("GetQuality thinks that props is: ", quality);
   generateQualities({qualityNumber: quality});
   
 
@@ -161,7 +161,7 @@ console.log("GetQuality thinks that props is: ", quality);
                 qualityText = {generateQualities[quality.Key]}
                 qualityName = {QualityKey[quality.Key]}
                 qualityNumber = {quality.Count}
-                onClick = {(event) => this.getQuality(quality.Count)}
+                onClick = {() => this.getQuality(quality.Count)}
                 modal = {this.state.modal}
               />
 
@@ -172,8 +172,8 @@ console.log("GetQuality thinks that props is: ", quality);
               <TextModal2
                 qualityText = {generateQualities[props.value.Key]}
                 qualityName = {QualityKey[props.value.Key]}
-                qualityNumber = {props.value.count}
-                clicker = {(event) => this.getQuality(event, props.value.Key)}
+                qualityNumber = {props.value.Count}
+                onClick = {() => this.getQuality(props.value.Count)}
                 modal = {this.state.modal}
               />
       </ul>
