@@ -7,13 +7,13 @@ import 'react-table/react-table.css'
 import data from '../data/CustomWeapons.json'
 import generateQualities from '../data/qualities.jsx'
 // import generateQualities from '../data/qualities.json'
-import eoteWeapons from "../data/EOTEWeapons.json"
+import eoteArmor from "../data/EOTEArmor.json"
 
 // import TextModal from "./DescriptionModal"
 import TextModal2 from "./DescriptionModal2"
 
 
-const weapons = eoteWeapons.Weapon;
+const armor = eoteArmor.Armor;
 
 const SkillKey = {
   "RANGLT": "Ranged: Light",
@@ -66,7 +66,7 @@ const QualityKey = {
 
 
 
-class WeaponsReactTable extends Component {
+class ArmorReactTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -99,78 +99,87 @@ class WeaponsReactTable extends Component {
       Header: 'Name',
       accessor: 'Name' // String-based value accessors!
     },
+    // {
+    //   id: 'category',
+    //   Header: 'Category',
+    //   accessor: 'Categories.Category',
+
+    //   Cell: props => typeof props.value === 'string'
+    //     ? <span className='category'>{props.value}</span>
+    //     : props.value.map(
+    //       category => <ul><span className='category'>{category}</span></ul>
+    //     )
+
+    //   // Custom cell components!
+    // },
     {
-      id: 'category',
-      Header: 'Category',
-      accessor: 'Categories.Category',
-
-      Cell: props => typeof props.value === 'string'
-        ? <span className='category'>{props.value}</span>
-        : props.value.map(
-          category => <ul><span className='category'>{category}</span></ul>
-        )
-
-      // Custom cell components!
+      id: 'soak',
+      Header: 'Soak',
+      accessor: row => row.Soak //|| `+${row.DamageAdd}`
     },
     {
-      id: 'damage',
-      Header: 'Damage',
-      accessor: row => row.Damage || `+${row.DamageAdd}`
+      id: 'defense',
+      Header: 'Defense',
+      accessor: row => row.Defense
     },
     {
-      id: 'critical',
-      Header: 'Critical',
-      accessor: row => row.Crit
+      id: 'hp',
+      Header: 'Hard Points',
+      accessor: row => row.HP
     },
-    {
-      id: 'skill',
-      Header: 'Skill',
-      accessor: row => SkillKey[row.SkillKey]
-    },
-    {
-      id: 'range',
-      Header: 'Range',
-      accessor: row => row.RangeValue.substring(2)
-    },
-    {
-      id: 'qualities',
-      Header: 'Qualities',
-      accessor: 'Qualities.Quality',
+    // {
+    //   id: 'range',
+    //   Header: 'Range',
+    //   accessor: row => row.RangeValue.substring(2)
+    // },
+// ==========================================================
+// ==========================================================
+    // {
+    //   id: 'qualities',
+    //   Header: 'Qualities',
+    //   accessor: 'Qualities.Quality',
 
-      Cell: props => props.value.length ? props.value.map(
-        quality => <ul>
+    //   Cell: props => props.value.length ? props.value.map(
+    //     quality => <ul>
 
-          <TextModal2
-            qualityText={generateQualities({
-              Key: quality.Key,
-              qualityNumber: quality.Count
-            })}
-            qualityName={QualityKey[quality.Key]}
-            qualityNumber={quality.Count}
-            modal={this.state.modal}
-          />
+    //       <TextModal2
+    //         qualityText={generateQualities({
+    //           Key: quality.Key,
+    //           qualityNumber: quality.Count
+    //         })}
+    //         qualityName={QualityKey[quality.Key]}
+    //         qualityNumber={quality.Count}
+    //         modal={this.state.modal}
+    //       />
 
-        </ul>
-      )
-        : <ul>
+    //     </ul>
+    //   )
+    //     : <ul>
 
-          <TextModal2
-            qualityText={generateQualities({
-              Key: props.value.Key,
-              qualityNumber: props.value.Count
-            })}
-            qualityName={QualityKey[props.value.Key]}
-            qualityNumber={props.value.Count}
-            modal={this.state.modal}
-          />
-        </ul>
+    //       <TextModal2
+    //         qualityText={generateQualities({
+    //           Key: props.value.Key,
+    //           qualityNumber: props.value.Count
+    //         })}
+    //         qualityName={QualityKey[props.value.Key]}
+    //         qualityNumber={props.value.Count}
+    //         modal={this.state.modal}
+    //       />
+    //     </ul>
 
-    },
+    // },
+// ==========================================================
+// ==========================================================
     {
       id: 'price',
       Header: 'Price',
       accessor: row => row.Price
     },
+    {
+        id: 'rarity',
+        Header: 'Rarity',
+        accessor: row => row.Rarity
+      },
     {
       id: 'description',
       Header: 'Description',
@@ -187,9 +196,9 @@ class WeaponsReactTable extends Component {
 
     return (
       <Container>
-        <p>This is the Weapons table built with react-table</p>
+        <p>This is the Armor table built with react-table</p>
         <ReactTable
-          data={weapons}
+          data={armor}
           columns={columns}
         />
       </Container>
@@ -197,4 +206,4 @@ class WeaponsReactTable extends Component {
   }
 }
 
-export default WeaponsReactTable;
+export default ArmorReactTable;

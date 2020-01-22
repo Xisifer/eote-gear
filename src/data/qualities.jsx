@@ -95,6 +95,8 @@ const allQualities = {
         <div><p>Weapons with this quality require time to set up before being used. The user must perform <font size="5">{props.qualityNumber}</font> maneuvers before making attacks with that weapon.</p></div>)},
     "SLOWFIRING": props => {return(
         <div><p>Slow-Firing weapons tend to be large, heavy, emplacement- mounted weapons like the turbolasers found on capital ships, or planetary defense ion cannons. While they deal incredible damage, they need time to recharge or cool down between shots. A weapon's Slow-Firing rating dictates how quickly the weapon can be fired after an attack. For example, a heavy turbolaser with Slow-Firing 2 must wait two Rounds after being fired before it can be fired again.</p></div>)},
+    "STUN": props => {return(
+        <div><p>A weapon with <font color="blue"><b>Stun</b></font> causes strain to the target. When the <font color="blue"><b>Stun</b></font> quality is activated, it inflicts strain equal to the weapon's <font color="blue"><b>Stun</b></font> rating.</p></div>)},
     "STUNSETTING": props => {return(
         <div><p>A weapon with <font color="blue"><b>Stun</b></font> causes strain to the target. When the <font color="blue"><b>Stun</b></font> quality is activated, it inflicts strain equal to the weapon's <font color="blue"><b>Stun</b></font> rating.</p></div>)},
     "STUNDAMAGE": props => {return(

@@ -7,7 +7,8 @@ import 'react-table/react-table.css'
 
 
 import WeaponsReactTable from "./components/weapons-react-table.js"
-import WeaponsReactTableFilter from "./components/weapons-react-table-filter.js"
+import ArmorReactTable from "./components/armor-react-table.js"
+
 
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
           This is the area of the App that is OUTSIDE of the React Table.
           POTATO.
         </p>
+        <ArmorReactTable/>
         <WeaponsReactTable/>
       </Container>
     )
